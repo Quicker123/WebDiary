@@ -1,0 +1,21 @@
+<?php
+    global $ry,$sqlConnect;
+
+    $query = mysqli_query($sqlConnect, "SELECT * FROM product");
+
+    $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+
+    echo "<h1>I will open</h1>";
+?>
+
+<?php if(mysqli_num_rows($query) > 0){?>
+    <?php foreach($result as $key){?>
+        <div class="storage">
+            <img src="<?php echo $ry['site_url'];?>/<?php echo $key['image'];?>" alt="Card image cap">            
+            <span>Price: <?php echo $ry['price']?></span>
+        </div>
+        <?php }?>
+        <?php }else{ ?>
+            <h1>I am iceCream.</h1>
+            <?php } ?>
+
