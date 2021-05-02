@@ -1,0 +1,30 @@
+<?php
+    global $ry, $sqlConnect;
+
+    $query = mysqli_query($sqlConnect, "SELECT quantity FROM cart");
+
+    $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+
+
+?>
+<div class="row1">
+    <div class="menu">
+        <img src="../asset/icons/menu.svg" alt="">
+    </div>
+    <div class="design">
+        <?php if(mysqli_num_rows($query) > 0){?>   
+        <span class="count"><?php echo mysqli_num_rows($query) ?></span>
+        <?php } else {?>
+            <span class = "count">0</span>
+        <?php } ?>
+        <img src="../asset/icons/heart.svg" alt="This is heart.">
+        <img src="../asset/icons/shopping.svg" alt="This is shopping.">
+        <a href="#" data-toggle="modal" data-target="#exampleModalCenter1"><img src="../asset/icons/register.svg" alt="This is user."></a>
+        <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><img src="../asset/icons/user.svg" alt="This is user."></a>
+    </div>
+</div>
+<?php
+    echo loadPage("signIn");
+    echo loadPage("register");
+    
+?>

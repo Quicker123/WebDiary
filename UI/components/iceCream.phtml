@@ -5,17 +5,21 @@
 
     $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
-    echo "<h1>I will open</h1>";
-?>
 
-<?php if(mysqli_num_rows($query) > 0){?>
+?>
+<div id="content" class="row">
+    <?php if(mysqli_num_rows($query) > 0){?>
     <?php foreach($result as $key){?>
-        <div class="storage">
+        <div class=" col-md-3 col-m-offset-md-4 " id = "storage">
             <img src="<?php echo $ry['site_url'];?>/<?php echo $key['image'];?>" alt="Card image cap">            
-            <span>Price: <?php echo $ry['price']?></span>
+            <span>Price: <?php echo $key['price']?></span>
+            <button class= 'cart' onClick = "">Add to Cart</button>
+            <button class = 'details'>See Details</button>
         </div>
         <?php }?>
         <?php }else{ ?>
             <h1>I am iceCream.</h1>
             <?php } ?>
+</div>
+
 

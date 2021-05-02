@@ -1,0 +1,82 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.row1 {
+  background-color: rgb(161, 207, 240);
+  height: 55px;
+}
+.row1 img {
+  height: 30px;
+}
+.menu {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.design {
+  float: right;
+  display: flex;
+  width: 200px;
+  margin-top: 10px;
+  margin-right: 20px;
+  justify-content: space-around;
+}
+
+#iceCream {
+  margin-left: 300px;
+}
+#content {
+  position: absolute;
+  border-radius: 2%;
+  padding: 10px;
+}
+#storage {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid rgb(112, 156, 206);
+  border-radius: 5%;
+}
+#storage img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.cart {
+  position: absolute;
+  border: none;
+  background: none;
+}
+.details,
+.cart {
+  position: absolute;
+  background: none;
+  border: 3px solid rgb(180, 224, 241);
+  padding: 5px;
+  width: 100px;
+  border-radius: 10px;
+  color: rgb(123, 174, 241);
+  margin-left: -5px;
+}
+
+.details {
+  margin-top: 50px;
+}
+.count {
+  position: absolute;
+  margin-top: -5px;
+  margin-left: -15px;
+  padding: 3px;
+  color: white;
+  border-radius: 70%;
+  font-style: bold;
+  background: red;
+  font-size: 15px;
+}
+.nameInput,
+.passwordInput {
+  border: 2px solid rgb(128, 179, 192);
+  outline: none;
+  border-radius: 25px;
+  padding: 10px;
+}
